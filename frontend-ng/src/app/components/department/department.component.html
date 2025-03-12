@@ -1,0 +1,27 @@
+<div *ngIf="department.length > 0" class="container mt-5">
+    <h3 class="text-center mb-4">List of Departments: {{ department.length }}</h3>
+  
+    <div *ngFor="let d of department" class="list-group mb-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-5">
+                <img src="./assets/images/{{ college }}.jpg" alt="{{ college }}" class="img-fluid rounded" height="200px" width="250px">
+            </div>
+            <div class="col-md-7">
+              
+              <h4 class="text-primary">
+                Name: 
+                  {{ d.departmentname }}
+              </h4>
+              <p class="text-muted">HOD: {{ d.hod }}</p>
+              <p class="text-muted">College: {{college }}</p>
+              <button class="btn btn-info btn-sm mt-2" [routerLink]="['/classes', college, d.departmentname]">View Classes</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

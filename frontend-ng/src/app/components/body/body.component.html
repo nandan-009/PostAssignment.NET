@@ -1,0 +1,27 @@
+<div class="row mt-5">
+    <!-- Left Column: Menu Buttons -->
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <p class="text-center">
+            <button [routerLink]="['/upload-file']" class="btn btn-info btn-lg btn-block mb-3"
+                    style="width: 100%;">Upload File</button>
+          </p>
+          <p class="text-center">
+            <button [routerLink]="['/college']" class="btn btn-info btn-lg btn-block"
+                    style="width: 100%;">List of Colleges</button>
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Right Column: Router Outlet -->
+    <div class="col-md-8">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+  

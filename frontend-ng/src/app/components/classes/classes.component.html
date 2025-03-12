@@ -1,0 +1,28 @@
+<div *ngIf="classArray.length > 0" class="container mt-5">
+    <h3 class="text-center mb-4">List of Classes: {{ classArray.length }}</h3>
+  
+    <div *ngFor="let c of classArray" class="list-group mb-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-5">
+                <img src="./assets/images/{{ college }}.jpg" alt="{{ college }}" class="img-fluid rounded" height="200px" width="250px">
+            </div>
+            <div class="col-md-7">
+              
+              <h4 class="text-primary">
+                Name: 
+               {{ c.classname }}
+              </h4>
+              <p class="text-muted">Staff name: {{ c.staffname }}</p>
+              <p class="text-muted">Capacity: {{ c.classcapacity }}</p>
+              <p class="text-muted">Department: {{ department }}</p>
+              <button class="btn btn-info btn-sm mt-2" [routerLink]="['/student', college, department, c.classname]">View Students</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
