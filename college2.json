@@ -1,0 +1,44 @@
+{
+    "collegename": "Stanford University",
+    "collegeaddress": "Stanford, California",
+    "Department": [
+        {
+            "departmentname": "Chemistry",
+            "hod": "Dr. Alice",
+            "classes": [
+                {
+                    "classname": "Batch-A",
+                    "staffname": "Dr. Rutherford",
+                    "classcapacity": 40,
+                    "student": [
+                        {
+                            "studentname": "David Lee",
+                            "studentdateOfBirth": "1999-04-12"
+                        },
+                        {
+                            "studentname": "Eve Martinez",
+                            "studentdateOfBirth": "1998-10-05"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "departmentname": "Biology",
+            "hod": "Dr. Emma",
+            "classes": [
+                {
+                    "classname": "Batch-B",
+                    "staffname": "Dr. Darwin",
+                    "classcapacity": 45,
+                    "student": [
+                        {
+                            "studentname": "Frank Wilson",
+                            "studentdateOfBirth": "1997-01-20"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

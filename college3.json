@@ -1,0 +1,44 @@
+{
+    "collegename": "MIT",
+    "collegeaddress": "Cambridge, Massachusetts",
+    "Department": [
+        {
+            "departmentname": "Electrical Engineering",
+            "hod": "Dr. James",
+            "classes": [
+                {
+                    "classname": "Batch-1",
+                    "staffname": "Dr. Maxwell",
+                    "classcapacity": 60,
+                    "student": [
+                        {
+                            "studentname": "Eve White",
+                            "studentdateOfBirth": "1998-05-12"
+                        },
+                        {
+                            "studentname": "Liam Brown",
+                            "studentdateOfBirth": "1999-02-28"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "departmentname": "Biology",
+            "hod": "Dr. Sophia",
+            "classes": [
+                {
+                    "classname": "Batch-2",
+                    "staffname": "Dr. Darwin",
+                    "classcapacity": 55,
+                    "student": [
+                        {
+                            "studentname": "Isla Green",
+                            "studentdateOfBirth": "1997-09-08"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
