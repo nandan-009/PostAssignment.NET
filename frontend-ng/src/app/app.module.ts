@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { FileUploadComponent } from './components/file-upload/file-upload.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './components/header/header.component';
 import { BodyComponent } from './components/body/body.component';
 import { RouterModule, Routes } from '@angular/router';
@@ -11,16 +11,17 @@ import { CollegeComponent } from './components/college/college.component';
 import { DepartmentComponent } from './components/department/department.component';
 import { ClassesComponent } from './components/classes/classes.component';
 import { StudentComponent } from './components/student/student.component';
-import { AuthorizeGuard } from './guards/authorize.guard';
+//import { AuthorizeGuard } from './guards/authorize.guard';
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AuthInterceptorService } from './services/auth-interceptor.service';
+import { AuthorizeGuard } from './guards/authorize.guard';
 
 const routes:Routes=[
   {
     path:"upload-file",
     component:FileUploadComponent,
     canActivate:[AuthorizeGuard]
-    
     
   },
   {
@@ -72,7 +73,13 @@ const routes:Routes=[
     HttpClientModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS, 
+      useClass: AuthInterceptorService, 
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

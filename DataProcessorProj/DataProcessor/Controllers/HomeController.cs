@@ -1,4 +1,5 @@
 ﻿using DataProcessor.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
@@ -7,6 +8,7 @@ namespace DataProcessor.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class HomeController : ControllerBase
     {
         private readonly IDataDAL dal;
