@@ -21,10 +21,13 @@ const MyComponent = () => {
     const formData = new FormData();
     formData.append('file', file);
 
+    const token = localStorage.getItem('token')
+
     try {
       const response = await axios.post('http://localhost:5001/api/Home/upload-json', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
+            'Authorization': `Bearer ${token}`          
         },
       });
 
